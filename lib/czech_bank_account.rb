@@ -37,7 +37,12 @@ module CzechBankAccount
       return if record.number.blank?
       return if record.number.count('-') > 1
 
-      prefix, number = record.number.split '-'
+      if record.number.include? '-'
+        prefix, number = record.number.split '-'
+      else
+        prefix = nil
+        number = record.number
+      end
 
       if prefix && prefix.length > 6
         record.errors.add :base, :number_prefix_is_over_length_limit
