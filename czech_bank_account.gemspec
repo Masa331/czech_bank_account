@@ -3,11 +3,11 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'czech_bank_account'
-  spec.version       = '0.1.1'
+  spec.version       = '1.0.0'
   spec.authors       = ['Premysl Donat']
   spec.email         = ['pdonat@seznam.cz']
 
-  spec.summary       = 'Library for working with czech bank account numbers'
+  spec.summary       = 'Library for validation of czech bank account numbers'
   spec.description   = spec.description
   spec.homepage      = 'https://github.com/Masa331/czech_bank_account'
   spec.license       = 'MIT'
@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
   end
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'activemodel'
   spec.add_development_dependency 'bundler'
+  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'pry'
 end
